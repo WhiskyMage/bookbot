@@ -13,6 +13,21 @@ def count_characters(text):
                         char_dict[character] = 1
         return char_dict
                 
-            
-      
+def sort_on(char_num):
+       return char_num["num"]
+
+def organizer(char_dict):
+        sort_char = []
+        for char, num in char_dict.items():
+                if not char.isalpha():
+                        continue
+                sort_char.append({"char": char, "num": num})
+
+        
+        sort_char.sort(reverse=True,key=sort_on)
+        return sort_char
+
+
+
+        
 
